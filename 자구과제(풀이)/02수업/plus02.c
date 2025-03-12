@@ -48,17 +48,17 @@ void moveArr(int *mArr, int start, int last)
     // s : 지워야 하는 index 값, l : arr 크기
 
     // 마지막 값을 제거해야할경우
-    if (start == last - 1)
+    // if (start == last - 1)
+    // {
+    //     return;
+    // }
+    // else
+    // {
+    for (int i = start; i < last; i++)
     {
-        return;
+        mArr[i] = mArr[i + 1];
     }
-    else
-    {
-        for (int i = start; i < last; i++)
-        {
-            mArr[i] = mArr[i + 1];
-        }
-    }
+    // }
 }
 
 // 삭제
