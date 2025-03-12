@@ -1,3 +1,6 @@
+// 이진 탐색
+// 종료 조건 : letf 값이 right값 보다 커질경우, 값을 찾을경우
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
