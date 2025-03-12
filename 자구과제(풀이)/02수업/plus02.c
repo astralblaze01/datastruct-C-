@@ -64,11 +64,8 @@ void moveArr(int *mArr, int start, int last)
 // 삭제
 int deleteArrVal(int *delArr, int dVal, int dSize)
 {
-    // 배열 원소 제거 횟수
-
     for (int i = 0; i < dSize; i++)
     {
-
         if (delArr[i] == dVal)
         {
             // 배열을 이동
