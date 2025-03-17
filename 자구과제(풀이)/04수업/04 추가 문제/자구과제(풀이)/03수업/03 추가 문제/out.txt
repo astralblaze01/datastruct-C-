@@ -1,0 +1,13 @@
+sequential search
+search 0 result : 0
+search 1 result : 1
+search 2 result : -1
+search 3 result : 2
+search 4 result : 3
+search 5 result : -1
+search 6 result : -1
+search 7 result : 4
+search 8 result : -1
+search 9 result : 5
+computation time: 494.000000ms
+
