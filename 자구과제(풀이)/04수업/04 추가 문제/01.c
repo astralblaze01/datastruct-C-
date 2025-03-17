@@ -1,7 +1,6 @@
 // 아직 구현 못함
-// test
 
-    #include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 
 FILE *initFile(const char *fileName, const char *type);
