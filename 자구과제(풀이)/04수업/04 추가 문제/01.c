@@ -28,7 +28,6 @@ void subset(int k, int size, int *check, int *setArr)
 {
     if (size == k)
     {
-
         printsubset(size, check, setArr);
     }
     else
