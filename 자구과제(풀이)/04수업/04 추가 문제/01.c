@@ -1,4 +1,4 @@
-// 아직 구현 못함
+// 아직 잘 모르겠음
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -8,6 +8,7 @@ int isOpen(FILE *f);
 int fileSize(FILE *f);
 int *initArray(FILE *f, int aSize);
 int *initCheckArr(int *arr, int size);
+int subset(int k, int size, int *check, int *setArr);
 
 int main()
 {
@@ -18,6 +19,30 @@ int main()
 
     setArr = initArray(fp, size);
     check = initCheckArr(check, size);
+
+    subset(0, size, check, setArr);
+}
+
+int subset(int k, int size, int *check, int *setArr)
+{
+    if (size == k)
+    {
+        for (int i = 0; i < size; i++)
+        {
+            if (check[i] == 1)
+            {
+                printf("%d ", setArr[i]);
+            }
+        }
+        printf("\n");
+    }
+    else
+    {
+        check[k] = 0;
+        subset(k + 1, size, check, setArr);
+        check[k] = 1;
+        subset(k + 1, size, check, setArr);
+    }
 }
 
 // check 배열 초기화
