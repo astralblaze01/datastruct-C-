@@ -11,7 +11,6 @@ int isOpen(FILE *f);
 int addPolynomial(polynomial *final, int paSize, int pbSize);
 FILE *initFile(const char *fileName, const char *type);
 polynomial *initArray(FILE *fFirst, FILE *fEnd, int fSize, int eSize);
-void printPolt(polynomial *final, int paSize, int pbSize);
 void printFinal(polynomial *final, int start, int end);
 
 int main()
