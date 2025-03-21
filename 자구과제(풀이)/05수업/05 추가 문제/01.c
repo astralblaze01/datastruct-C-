@@ -17,16 +17,16 @@ int main()
 
     int start = fileSize(fa, 0);
     int end = fileSize(fb, start);
-    int resultSize = start + end;
+    int resultSize = (start + end) * 2;
 
     int *result = (int *)malloc(sizeof(int) * resultSize);
 
     inputArr(fa, result, 0, start);
-    printArr(result, 0, start);
-    printf("\n");
+    // printArr(result, 0, start);
+    // printf("\n");
     inputArr(fb, result, start, end);
-    printArr(result, start, end);
-    printf("\n");
+    // printArr(result, start, end);
+    // printf("\n");
     resultSize = unionSet(result, start, end);
 
     printArr(result, end, resultSize);
