@@ -33,11 +33,11 @@ void subset(int k, int size, int *check, int *setArr)
     else
     {
         // 현재 원소를 포함하지 않음
-        check[k] = 0;
+        check[k] = 1;
         subset(k + 1, size, check, setArr);
 
         // 현재 원소를 포함함함
-        check[k] = 1;
+        check[k] = 0;
         subset(k + 1, size, check, setArr);
     }
 }
