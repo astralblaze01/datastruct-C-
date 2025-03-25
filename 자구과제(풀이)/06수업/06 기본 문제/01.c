@@ -48,7 +48,7 @@ int main()
 
     // tupleB 출력력
     FilePrintTuple(fOut, threeTupleB, maxTupleSize);
-    printTuple(threeTupleB, maxTupleSize);
+    // printTuple(threeTupleB, maxTupleSize);
 
     // 파일 닫기기
     fclose(fReed);
@@ -67,10 +67,10 @@ int main()
 
 void fastTranspose(term *a, term *b)
 {
-    int *rowTerms = (int *)malloc(sizeof(int) * a[0].col);
-    int *startingPos = (int *)malloc(sizeof(int) * a[0].col);
+    int *rowTerms = (int *)malloc(sizeof(int) * a[0].row);
+    int *startingPos = (int *)malloc(sizeof(int) * a[0].row);
 
-    int i, j, numCols = a[0].col, numTerms = a[0].values;
+    int i, j, numCols = a[0].row, numTerms = a[0].values;
 
     b[0].row = a[0].col;
     b[0].col = a[0].row;
@@ -89,7 +89,7 @@ void fastTranspose(term *a, term *b)
             rowTerms[i] = 0;
 
         for (i = 1; i <= numTerms; i++)
-            rowTerms[a[i].col]++;
+            rowTerms[a[i].row]++;
 
         startingPos[0] = 1;
 
@@ -98,9 +98,9 @@ void fastTranspose(term *a, term *b)
 
         for (i = 1; i <= numTerms; i++)
         {
-            j = startingPos[a[i].col]++;
-            b[j].row = a[i].col;
+            j = startingPos[a[i].row]++;
             b[j].col = a[i].row;
+            b[j].row = a[i].col;
             b[j].values = a[i].values;
         }
 
