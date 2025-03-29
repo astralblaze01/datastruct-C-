@@ -22,8 +22,8 @@ int countZeroInKey(int *key, int keySize);
 int main()
 {
     // file 선언
-    FILE *fReed = fopen("in3.txt", "r");
-    FILE *fKey = fopen("key3.txt", "r");
+    FILE *fReed = fopen("in1.txt", "r");
+    FILE *fKey = fopen("key1.txt", "r");
     isFileOpen(fReed);
     isFileOpen(fKey);
 
