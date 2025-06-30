@@ -10,7 +10,7 @@ typedef struct _tree
 
 treeNode *makeTreeNode(int val);
 treeNode *makeBST(FILE *file, treeNode *head);
-void *findLevelAndValue(FILE *file, treeNode *head);
+void findLevelAndValue(FILE *file, treeNode *head);
 
 int main(void)
 {
@@ -36,7 +36,7 @@ int main(void)
     findLevelAndValue(searchFile, head);
 }
 
-void *findLevelAndValue(FILE *file, treeNode *head)
+void findLevelAndValue(FILE *file, treeNode *head)
 {
     treeNode *temp;
     int level, cnt, key;
