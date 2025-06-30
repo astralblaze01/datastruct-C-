@@ -11,6 +11,7 @@ typedef struct _tree
 treeNode *makeTreeNode(int val);
 treeNode *makeBST(FILE *file, treeNode *head);
 void findLevelAndValue(FILE *file, treeNode *head);
+void deleteTree(treeNode *head);
 
 int main(void)
 {
@@ -34,13 +35,26 @@ int main(void)
     head = makeBST(file, head);
 
     findLevelAndValue(searchFile, head);
+
+    deleteTree(head);
+}
+
+void deleteTree(treeNode *head)
+{
+    if (head == NULL)
+    {
+        return;
+    }
+    deleteTree(head->left);
+    deleteTree(head->right);
+    free(head);
 }
 
 void findLevelAndValue(FILE *file, treeNode *head)
 {
     treeNode *temp;
     int level, cnt, key;
-    
+
     while (fscanf(file, "%d", &key) != EOF)
     {
         temp = head;
